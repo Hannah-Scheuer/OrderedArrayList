@@ -8,6 +8,8 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super(startingCap);
   }
 
-  
+  public boolean add(T element){
+    super.add(element);
+  }
 
 }
