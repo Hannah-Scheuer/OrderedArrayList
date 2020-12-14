@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
 
-  public NoNullArrayList(){
+  public OrderedArrayList(){
     super();
   }
 
-  public NoNullArrayList(int startingCap){
+  public OrderedArrayList(int startingCap){
     super(startingCap);
   }
 
   private int findIndex(T element){
     for (int i=0;i< size();i++){
-      if (element> get(i)){
+      if (element.compareTo(get(i))>0){
         return i;
       }
     }
@@ -19,7 +19,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public boolean add(T element){
-    return super.add(findIndex(element), element);
+    super.add(findIndex(element), element);
+    return true;
   }
 
   public void add(int index, T element){
