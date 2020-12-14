@@ -22,7 +22,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     return super.add(findIndex(element), element);
   }
 
-  
+  public void add(int index, T element){
+    super.add(findIndex(element), element);
+  }
 
 
 
