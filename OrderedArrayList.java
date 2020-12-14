@@ -18,6 +18,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     return size();
   }
 
+  public boolean add(T element){
+    return super.add(findIndex(element), element);
+  }
+
+  
+
 
 
 }
