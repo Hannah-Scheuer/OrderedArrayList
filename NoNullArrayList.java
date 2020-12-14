@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T>{
 
   public NoNullArrayList(){
@@ -12,7 +13,6 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (element.equals(null)) {
       throw new IllegalArgumentException("Null is not a valid element");
     }
-    else{}
     super.add(element);
   }
 
