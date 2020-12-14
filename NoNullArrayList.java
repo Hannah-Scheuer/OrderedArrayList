@@ -1,10 +1,10 @@
 public class NoNullArrayList<T> extends ArrayList<T>{
 
-  public NoNullArrayList<T>(){
+  public NoNullArrayList(){
     super();
   }
 
-  public NoNullArrayList<T>(startingCap){
+  public NoNullArrayList(int startingCap){
     super(startingCap);
   }
 
@@ -12,14 +12,22 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (element.equals(null)) {
       throw new IllegalArgumentException("Null is not a valid element");
     }
+    else{}
     super.add(element);
   }
 
-  public boolean add(int index, T element){
+  public void add(int index, T element){
     if (element.equals(null)) {
       throw new IllegalArgumentException("Null is not a valid element");
     }
     super.add(index, element);
+  }
+
+  public T set(int index, String element){
+    if (element.equals(null)) {
+      throw new IllegalArgumentException("Null is not a valid element");
+    }
+    super.set(index, element);
   }
 
 }
