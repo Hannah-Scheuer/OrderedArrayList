@@ -10,6 +10,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   private int findIndex(T element){
+    if (element == null) {
+      throw new IllegalArgumentException("Null is not a valid element");
+    }
     for (int i=0;i< size();i++){
       if (element.compareTo(get(i))<0){
         return i;
