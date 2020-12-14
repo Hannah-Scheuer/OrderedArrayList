@@ -13,7 +13,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (element.equals(null)) {
       throw new IllegalArgumentException("Null is not a valid element");
     }
-    super.add(element);
+    return super.add(element);
   }
 
   public void add(int index, T element){
@@ -23,11 +23,11 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super.add(index, element);
   }
 
-  public T set(int index, String element){
+  public T set(int index, T element){
     if (element.equals(null)) {
       throw new IllegalArgumentException("Null is not a valid element");
     }
-    super.set(index, element);
+    return super.set(index, element);
   }
 
 }
