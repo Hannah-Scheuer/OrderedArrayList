@@ -1,7 +1,7 @@
 public class NoNullArrayList<T> extends ArrayList<T>{
 
   public NoNullArrayList<T>(){
-    super(1);
+    super();
   }
 
   public NoNullArrayList<T>(startingCap){
@@ -9,6 +9,9 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public boolean add(T element){
+    if (element.equals(null)) {
+      throw new IllegalArgumentException("Null is not a valid element");
+    }
     super.add(element);
   }
 
